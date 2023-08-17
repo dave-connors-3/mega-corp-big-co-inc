@@ -1,0 +1,36 @@
+models:
+  - name: customers
+    description: core data model for customers of our business
+    columns:
+      - name: customer_sk
+        description: unique identifier for a customer
+        tests:
+          - unique
+          - not_null
+
+  - name: transactions
+    description: all the transactions you could dream of, enriched by customer and store data from the core dbt project
+    columns:
+      - name: transaction_id
+        tests: 
+          - unique
+          - not_null
+
+  - name: stores
+    description: core data model for stores
+    columns:
+      - name: store_sk
+        description: unique identifier for a store
+        tests:
+          - unique
+          - not_null
+
+
+  - name: call_centers
+    description: core data model for call centers
+    columns:
+      - name: call_center_sk
+        description: unique identifier for a call center
+        tests:
+          - unique
+          - not_null
