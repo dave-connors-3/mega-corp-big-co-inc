@@ -8,14 +8,6 @@ models:
           - unique
           - not_null
 
-  - name: transactions
-    description: all the transactions you could dream of, enriched by customer and store data from the core dbt project
-    columns:
-      - name: transaction_id
-        tests: 
-          - unique
-          - not_null
-
   - name: stores
     description: core data model for stores
     columns:

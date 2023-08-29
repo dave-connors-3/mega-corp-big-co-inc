@@ -1,0 +1,21 @@
+sources:
+  - name: mega_corp_big_co_inc
+    tables:
+      - name: customers
+      - name: stores
+      
+  - name: tpcds_core
+    database: raw_tpch
+    schema: tpcds_sf10tcl
+    tables:
+      - name: reason
+      - name: catalog_returns
+      - name: store_returns
+      - name: warehouse
+      - name: promotion
+      - name: web_returns
+      - name: web_page
+      - name: catalog_sales
+      - name: item
+      - name: store_sales
+      - name: web_sales
