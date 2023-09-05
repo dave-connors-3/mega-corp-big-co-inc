@@ -1,5 +1,7 @@
 sources:
   - name: mega_corp_big_co_inc
+    database: analytics
+    schema: dbt_ggoheen
     tables:
       - name: customers
       - name: stores
