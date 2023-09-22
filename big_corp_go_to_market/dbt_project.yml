@@ -1,0 +1,23 @@
+name: big_corp_go_to_market
+config-version: 2
+model-paths:
+  - models
+macro-paths:
+  - macros
+seed-paths:
+  - seeds
+test-paths:
+  - tests
+analysis-paths:
+  - analyses
+target-path: target
+snapshot-paths:
+  - snapshots
+clean-targets:
+  - target
+  - dbt_packages
+profile: default
+models:
+  big_corp_go_to_market:
+    marts:
+      materialized: table
