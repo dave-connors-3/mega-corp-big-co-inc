@@ -1,6 +1,7 @@
 models:
   - name: customers
     description: core data model for customers of our business
+    latest_version: 2
     config:
       contract:
         enforced: true
@@ -40,6 +41,9 @@ models:
         data_type: number
       - name: income_band_upper_bound
         data_type: number
+    versions:
+      - v: 1
+      - v: 2
   - name: transactions
     description: all the transactions you could dream of, enriched by customer and store data from the core dbt project
     columns:
