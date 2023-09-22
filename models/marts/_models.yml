@@ -2,6 +2,7 @@ models:
   - name: customers
     description: core data model for customers of our business
     latest_version: 2
+    access: public
     config:
       contract:
         enforced: true
@@ -44,64 +45,12 @@ models:
     versions:
       - v: 1
       - v: 2
-  - name: transactions
-    description: all the transactions you could dream of, enriched by customer and store data from the core dbt project
-    access: protected
-    group: sales_analytics
+  - name: stores
+    description: core data model for stores
+    access: public
     config:
       contract:
         enforced: true
-    columns:
-      - name: transaction_id
-        tests:
-          - unique
-          - not_null
-
-        data_type: text
-      - name: customer_sk
-        data_type: number
-      - name: transaction_type
-        data_type: text
-      - name: item_sk
-        data_type: number
-      - name: call_center_sk
-        data_type: number
-      - name: store_sk
-        data_type: number
-      - name: brand
-        data_type: text
-      - name: class
-        data_type: text
-      - name: category
-        data_type: text
-      - name: color
-        data_type: text
-      - name: product_name
-        data_type: text
-      - name: reason
-        data_type: text
-      - name: url
-        data_type: text
-      - name: web_page_type
-        data_type: text
-      - name: transaction_amount
-        data_type: number
-      - name: first_name
-        data_type: text
-      - name: last_name
-        data_type: text
-      - name: is_preferred_customer
-        data_type: boolean
-      - name: gender
-        data_type: text
-      - name: store_name
-        data_type: text
-      - name: city
-        data_type: text
-      - name: state
-        data_type: text
-  - name: stores
-    description: core data model for stores
     columns:
       - name: store_sk
         description: unique identifier for a store
@@ -110,6 +59,65 @@ models:
           - not_null
 
 
+        data_type: number
+      - name: store_id
+        data_type: text
+      - name: rec_start_date
+        data_type: date
+      - name: rec_end_date
+        data_type: date
+      - name: closed_date_sk
+        data_type: number
+      - name: store_name
+        data_type: text
+      - name: number_employees
+        data_type: number
+      - name: floor_space
+        data_type: number
+      - name: hours
+        data_type: text
+      - name: manager
+        data_type: text
+      - name: market_id
+        data_type: number
+      - name: geography_class
+        data_type: text
+      - name: market_desc
+        data_type: text
+      - name: market_manager
+        data_type: text
+      - name: division_id
+        data_type: number
+      - name: division_name
+        data_type: text
+      - name: company_id
+        data_type: number
+      - name: company_name
+        data_type: text
+      - name: street_number
+        data_type: text
+      - name: street_name
+        data_type: text
+      - name: street_type
+        data_type: text
+      - name: suite_number
+        data_type: text
+      - name: city
+        data_type: text
+      - name: county
+        data_type: text
+      - name: state
+        data_type: text
+      - name: zip
+        data_type: text
+      - name: country
+        data_type: text
+      - name: gmt_offset
+        data_type: number
+      - name: tax_precentage
+        data_type: number
+      - name: store_closed_date
+        data_type: date
   - name: call_centers
     description: core data model for call centers
     columns:
