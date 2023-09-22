@@ -1,6 +1,9 @@
 models:
   - name: customers
     description: core data model for customers of our business
+    config:
+      contract:
+        enforced: true
     columns:
       - name: customer_sk
         description: unique identifier for a customer
@@ -8,11 +11,40 @@ models:
           - unique
           - not_null
 
+        data_type: number
+      - name: salutation
+        data_type: text
+      - name: first_name
+        data_type: text
+      - name: last_name
+        data_type: text
+      - name: city
+        data_type: text
+      - name: state
+        data_type: text
+      - name: country
+        data_type: text
+      - name: email_address
+        data_type: text
+      - name: is_preferred_customer
+        data_type: boolean
+      - name: gender
+        data_type: text
+      - name: marital_status
+        data_type: text
+      - name: credit_rating
+        data_type: text
+      - name: vehicle_count
+        data_type: number
+      - name: income_band_lower_bound
+        data_type: number
+      - name: income_band_upper_bound
+        data_type: number
   - name: transactions
     description: all the transactions you could dream of, enriched by customer and store data from the core dbt project
     columns:
       - name: transaction_id
-        tests: 
+        tests:
           - unique
           - not_null
 
