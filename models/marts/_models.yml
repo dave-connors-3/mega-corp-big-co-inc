@@ -46,12 +46,60 @@ models:
       - v: 2
   - name: transactions
     description: all the transactions you could dream of, enriched by customer and store data from the core dbt project
+    access: protected
+    group: sales_analytics
+    config:
+      contract:
+        enforced: true
     columns:
       - name: transaction_id
         tests:
           - unique
           - not_null
 
+        data_type: text
+      - name: customer_sk
+        data_type: number
+      - name: transaction_type
+        data_type: text
+      - name: item_sk
+        data_type: number
+      - name: call_center_sk
+        data_type: number
+      - name: store_sk
+        data_type: number
+      - name: brand
+        data_type: text
+      - name: class
+        data_type: text
+      - name: category
+        data_type: text
+      - name: color
+        data_type: text
+      - name: product_name
+        data_type: text
+      - name: reason
+        data_type: text
+      - name: url
+        data_type: text
+      - name: web_page_type
+        data_type: text
+      - name: transaction_amount
+        data_type: number
+      - name: first_name
+        data_type: text
+      - name: last_name
+        data_type: text
+      - name: is_preferred_customer
+        data_type: boolean
+      - name: gender
+        data_type: text
+      - name: store_name
+        data_type: text
+      - name: city
+        data_type: text
+      - name: state
+        data_type: text
   - name: stores
     description: core data model for stores
     columns:
