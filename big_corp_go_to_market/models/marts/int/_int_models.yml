@@ -1,0 +1,41 @@
+models:
+  - name: int_web_returns__joined
+    description: enrich web sales with return reason and web site data
+    access: private
+    group: sales_analytics
+    columns:
+      - name: return_id
+        tests:
+          - unique
+          - not_null
+  - name: int_web_sales__joined
+    description: enrich web sales with promotion and web site data
+    access: private
+    group: sales_analytics
+    columns:
+      - name: sale_id
+        tests:
+          - unique
+          - not_null
+
+  - name: int_returns__unioned
+    description: model unioning returns from all verticals
+    access: private
+    group: sales_analytics
+    columns:
+      - name: return_id
+        tests:
+          - unique
+          - not_null
+
+  - name: int_sales__unioned
+    description: model unioning sales from all verticals
+    access: private
+    group: sales_analytics
+    columns:
+      - name: sale_id
+        tests:
+          - unique
+          - not_null
+
+
