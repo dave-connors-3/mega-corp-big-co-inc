@@ -2,13 +2,13 @@ with
 
 customers as (
 
-    select * from {{ ref('customers') }}
+    select * from {{ ref('mega_corp_big_co_inc', 'customers') }}
 
 ),
 
 stores as (
 
-    select * from {{ ref('stores') }}
+    select * from {{ ref('mega_corp_big_co_inc', 'stores') }}
 
 ),
 

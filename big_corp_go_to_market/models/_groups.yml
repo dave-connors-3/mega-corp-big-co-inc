@@ -1,0 +1,7 @@
+groups:
+  - name: sales_analytics
+    owner:
+      name: Ralphie
+  - name: core
+    owner:
+      name: Barnold

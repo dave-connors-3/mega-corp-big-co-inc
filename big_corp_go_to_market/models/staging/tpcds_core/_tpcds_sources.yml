@@ -1,0 +1,16 @@
+sources:
+  - name: tpcds_core
+    database: raw_tpch
+    schema: tpcds_sf10tcl
+    tables:
+      - name: store_sales
+      - name: catalog_sales
+      - name: reason
+      - name: item
+      - name: web_page
+      - name: warehouse
+      - name: catalog_returns
+      - name: web_sales
+      - name: web_returns
+      - name: store_returns
+      - name: promotion
